@@ -17,6 +17,7 @@ import { HeroesComponent } from './components/heroes/heroes.component';
 import { HeroeComponent } from './components/heroe/heroe.component';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
