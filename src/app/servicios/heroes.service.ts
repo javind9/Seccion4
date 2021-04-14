@@ -73,11 +73,14 @@ export class HeroesService {
       termino = termino.toLowerCase();
 
       //Busqueda
-      for ( let heroe of this.heroes ){
+      for ( let i = 0; i < this.heroes.length; i++  ){
+
+        let heroe = this.heroes[i]; 
 
         let nombre = heroe.nombre.toLowerCase();
         //IndexOf buscar string dentro del nombre; si es false devuelve un -1
         if ( nombre.indexOf( termino ) >= 0 ){
+          heroe.idx = i;
           heroesArr.push( heroe );
         }
       }
@@ -94,5 +97,6 @@ export class HeroesService {
       img: string;
       aparicion: string;
       casa: string;
+      idx?: number;
     };
 
